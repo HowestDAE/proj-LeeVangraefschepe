@@ -43,7 +43,7 @@ namespace RunescapeItemSearcher.ViewModel
         private void SearchItem()
         {
             var overviewVM = MainPage.DataContext as OverviewVM;
-            overviewVM.SearchItems(0, ItemSearchBox.ToLower());
+            overviewVM.SearchItems(ItemSearchBox.ToLower());
         }
     }
 }

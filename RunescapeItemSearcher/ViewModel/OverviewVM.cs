@@ -12,16 +12,18 @@ namespace RunescapeItemSearcher.ViewModel
     public class OverviewVM : ObservableObject
     {
         ItemAPIRepository _itemAPIRepository = new ItemAPIRepository();
-        private List<Item> items;
+        private List<Item> items = new List<Item>();
         private bool isLoading = false;
 
         public OverviewVM()
         {
 
         }
-        async void GetItems(int category, string name)
+        async void GetItems(string name)
         {
-            Items = await _itemAPIRepository.GetItems(category, name);
+            IsLoading = true;
+            Items = await _itemAPIRepository.GetItems(name);
+            IsLoading = false;
         }
         public bool IsLoading
         {
@@ -41,11 +43,10 @@ namespace RunescapeItemSearcher.ViewModel
                 OnPropertyChanged(nameof(Items));
             }
         }
-        public void SearchItems(int category, string name)
+        public void SearchItems(string name)
         {
-            IsLoading = true;
-            GetItems(category, name);
-            IsLoading = false;
+            Items = new List<Item>();
+            GetItems(name);
         }
     }
 }
