@@ -53,6 +53,7 @@ namespace RunescapeItemSearcher.ViewModel
         public void GotoDetails(Item item)
         {
             CurrentPage = DetailPage;
+            ((DetailVM)DetailPage.DataContext).Item = item;
         }
     }
 }

@@ -89,6 +89,7 @@
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Repository\ItemAPIRepository.cs" />
+    <Compile Include="ViewModel\DetailVM.cs" />
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />
     <Compile Include="View\Converters\BoolToVisible.cs" />

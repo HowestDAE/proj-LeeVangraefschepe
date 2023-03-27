@@ -6,9 +6,15 @@
       xmlns:local="clr-namespace:RunescapeItemSearcher.View"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:vm="clr-namespace:RunescapeItemSearcher.ViewModel"
+      xmlns:conv="clr-namespace:RunescapeItemSearcher.View.Converters"
       Title="DetailPage">
 
+  <Page.DataContext>
+    <vm:DetailVM></vm:DetailVM>
+  </Page.DataContext>
+
     <Grid>
-        
+        <TextBlock Text="{Binding Item.Name, FallbackValue=Title}" Foreground="#e1bb34" FontSize="36" HorizontalAlignment="Center"></TextBlock>
     </Grid>
 </Page>
