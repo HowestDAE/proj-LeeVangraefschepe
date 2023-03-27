@@ -15,6 +15,46 @@
   </Page.DataContext>
 
     <Grid>
-        <TextBlock Text="{Binding Item.Name, FallbackValue=Title}" Foreground="#e1bb34" FontSize="36" HorizontalAlignment="Center"></TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+      <TextBlock Grid.ColumnSpan="3" Text="{Binding Item.Name, FallbackValue=Title}" Foreground="#e1bb34" FontSize="36" HorizontalAlignment="Center"></TextBlock>
+
+      <Image Grid.Row="1" Grid.RowSpan="2" Source="/Resources/Images/ImageBackground.png"/>
+      <Image Grid.Row="1" Grid.RowSpan="2" Source="{Binding Item.Icon}" Stretch="None"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="3">
+            <StackPanel Orientation="Horizontal">
+              <TextBlock Grid.Column="1" Grid.Row="1" Text="Price: " Foreground="AliceBlue" FontSize="21"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Item.Current.price, FallbackValue=10m}" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+          <StackPanel Orientation="Horizontal">
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="Trend: " Foreground="AliceBlue" FontSize="21"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Item.Current.trend, FallbackValue=negative}" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Center"></TextBlock>
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="Member only: " Foreground="AliceBlue" FontSize="21"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Item.Member, FallbackValue=true}" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Center"></TextBlock>
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="Type: " Foreground="AliceBlue" FontSize="21"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Item.Type, FallbackValue=All}" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Center"></TextBlock>
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="Id: " Foreground="AliceBlue" FontSize="21"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Item.Id, FallbackValue=0}" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Center"></TextBlock>
+          </StackPanel>
+
+        </StackPanel>
+      
     </Grid>
 </Page>
