@@ -53,7 +53,12 @@
                 <TextBlock Grid.Column="1" Grid.Row="1" Text="Id: " Foreground="AliceBlue" FontSize="21"></TextBlock>
                 <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Item.Id, FallbackValue=0}" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Center"></TextBlock>
           </StackPanel>
+        </StackPanel>
+        <Button Command="{Binding OpenPageCommand}" Grid.Column="0" Grid.Row="3" Margin="12" Content="Open" FontSize="18"></Button>
 
+        <StackPanel Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Orientation="Vertical">
+          <TextBlock Grid.Column="1" Grid.Row="1" Text="Description: " Foreground="AliceBlue" FontSize="21"></TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Item.Description, FallbackValue=description here.}" TextWrapping="Wrap" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Center"></TextBlock>
         </StackPanel>
       
     </Grid>
