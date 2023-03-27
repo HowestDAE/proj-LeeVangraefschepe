@@ -11,6 +11,8 @@ namespace RunescapeItemSearcher.Model
     {
         [JsonProperty (propertyName: "id")]
         public int Id { get; set; }
+        [JsonProperty(propertyName: "type")]
+        public string Type { get; set; }
         [JsonProperty (propertyName: "name")]
         public string Name { get; set; }
         [JsonProperty(propertyName: "icon")]
@@ -19,9 +21,13 @@ namespace RunescapeItemSearcher.Model
         public string Description { get; set; }
         [JsonProperty(propertyName: "current")]
         public Current Current { get; set; }
+        [JsonProperty(propertyName: "member")]
+        public bool Member { get; set; }
     }
     public class Current
     {
+        [JsonProperty(propertyName: "trend")]
+        public string trend { get; set; }
         [JsonProperty (propertyName: "price")]
         public string price { get; set; }
     }

@@ -18,12 +18,30 @@
       <Grid.Resources>
         <conv:BoolToVisible x:Key="BoolToVisable"/>
       </Grid.Resources>
-        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#1d282f" Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisable}}"></TextBlock>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="LOADING..." Foreground="#e1bb34" FontSize="48" Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisable}}"></TextBlock>
-        <ListBox Grid.Row="1" Foreground="Transparent" Background="Transparent" ItemsSource="{Binding Items}" HorizontalContentAlignment="Stretch" BorderThickness="0">
-        <ListBox.ItemTemplate>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Orderd by" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Bottom" Margin="15,0"></TextBlock>
+        <ComboBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}" Margin="15,0" Grid.Row="1"></ComboBox>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Open selected item" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Bottom" Margin="15,0"></TextBlock>
+        <Button Grid.Row="1" Grid.Column="1" Content="Open" Command="{Binding ShowDetailPage}" Margin="15,0"></Button>
+
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#1d282f" Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisable}}"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Text="LOADING..." Foreground="#e1bb34" FontSize="48" Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisable}}"></TextBlock>
+        <ListBox   Grid.Row="3" Grid.ColumnSpan="3" Foreground="Transparent" Background="Transparent" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" HorizontalContentAlignment="Stretch" BorderThickness="0">
+            <ListBox.ItemTemplate>
           <DataTemplate>
-             <Grid>
+             <Grid Grid.ColumnSpan="3" Grid.Row="3">
                <Grid.ColumnDefinitions>
                    <ColumnDefinition Width="4*"></ColumnDefinition>
                    <ColumnDefinition></ColumnDefinition>
@@ -34,9 +52,9 @@
                </StackPanel>
                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
                  <TextBlock Text="{Binding Current.price}" Foreground="White" FontSize="21"/>
-                 <Image Height="20" Width="20" Margin="4" Source="{Binding Icon}"/>
+                 <Image Height="20" Width="20" Margin="0,5,0,0" Source="/Resources/Images/RunescapeCoins.png"/>
                </StackPanel>
-                    </Grid>
+             </Grid>
             
           </DataTemplate>
         </ListBox.ItemTemplate>
