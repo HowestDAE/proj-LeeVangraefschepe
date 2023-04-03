@@ -27,7 +27,10 @@ namespace OfflineRepoCreator
                 }
             }
 
-            string json = JsonConvert.SerializeObject(items, Formatting.Indented);
+            JsonData jsonData = new JsonData();
+            jsonData.Items = items;
+            jsonData.LastUpdate = DateTime.Now;
+            string json = JsonConvert.SerializeObject(jsonData, Formatting.Indented);
             File.WriteAllText("items.json", json);
         }
 

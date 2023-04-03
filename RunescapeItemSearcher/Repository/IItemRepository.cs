@@ -11,5 +11,6 @@ namespace RunescapeItemSearcher.Repository
     {
         List<Category> GetCategories();
         Task<List<Item>> GetItems(string name, Category category);
+        DateTime LastUpdate { get; }
     }
 }

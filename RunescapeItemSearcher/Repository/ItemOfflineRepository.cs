@@ -13,6 +13,28 @@ namespace RunescapeItemSearcher.Repository
     public class ItemOfflineRepository : IItemRepository
     {
         private Dictionary<int, List<Item>> _data = null;
+        private DateTime _lastUpdate = DateTime.MinValue;
+
+        public DateTime LastUpdate => GetLastUpdate();
+        private DateTime GetLastUpdate()
+        {
+            if (_lastUpdate == DateTime.MinValue)
+            {
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = "RunescapeItemSearcher.Resources.Data.items.json";
+                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                {
+                    using (var reader = new StreamReader(stream))
+                    {
+                        string json = reader.ReadToEndAsync().Result;
+                        var cardTokens = JToken.Parse(json).SelectToken("LastUpdate");
+                        _lastUpdate = cardTokens.ToObject<DateTime>();
+                    }
+                }
+            }
+            return _lastUpdate;
+        }
+
         public List<Category> GetCategories()
         {
             return Category.GetAll();
@@ -37,7 +59,7 @@ namespace RunescapeItemSearcher.Repository
                 using (var reader = new StreamReader(stream))
                 {
                     string json = await reader.ReadToEndAsync();
-                    var cardTokens = JToken.Parse(json);
+                    var cardTokens = JToken.Parse(json).SelectToken("Items");
 
                     foreach (var token in cardTokens)
                     {
