@@ -10,7 +10,7 @@ using RunescapeItemSearcher.Model;
 
 namespace RunescapeItemSearcher.Repository
 {
-    public class ItemAPIRepository
+    public class ItemAPIRepository : IItemRepository
     {
         public List<Category> GetCategories()
         {

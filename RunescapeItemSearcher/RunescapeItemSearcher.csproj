@@ -89,6 +89,7 @@
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Repository\ItemAPIRepository.cs" />
+    <Compile Include="Repository\IItemRepository.cs" />
     <Compile Include="ViewModel\DetailVM.cs" />
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />
@@ -143,7 +144,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Resources\Data\items.json" />
+    <EmbeddedResource Include="Resources\Data\items.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -13,7 +13,7 @@ namespace RunescapeItemSearcher.ViewModel
 {
     public class OverviewVM : ObservableObject
     {
-        ItemAPIRepository _itemAPIRepository = new ItemAPIRepository();
+        IItemRepository _itemRepository = new ItemAPIRepository();
         private List<Item> items = new List<Item>();
         private bool isLoading = false;
         private List<Category> _categories = new List<Category>();
@@ -21,14 +21,14 @@ namespace RunescapeItemSearcher.ViewModel
 
         public OverviewVM()
         {
-            Categories = _itemAPIRepository.GetCategories();
+            Categories = _itemRepository.GetCategories();
             SelectedCategory = Categories[0];
             ShowDetailPage = new RelayCommand(LoadDetailPage, IsSelected);
         }
         async void GetItems(string name)
         {
             IsLoading = true;
-            Items = await _itemAPIRepository.GetItems(name, SelectedCategory);
+            Items = await _itemRepository.GetItems(name, SelectedCategory);
             IsLoading = false;
         }
         public List<Category> Categories
