@@ -12,7 +12,7 @@ namespace RunescapeItemSearcher.Repository
 {
     public class ItemAPIRepository : IItemRepository
     {
-        public DateTime LastUpdate => DateTime.Now;
+        public string LastUpdate => "ONLINE";
         public List<Category> GetCategories()
         {
             return Category.GetAll();

@@ -20,10 +20,19 @@ namespace OfflineRepoCreator
             {
                 Console.Clear();
                 Console.WriteLine($"Getting data {i}/42");
-                var tempItems = GetItemsAsync("a", i).Result;
-                foreach (var item in tempItems)
+                char filter = 'a';
+                int found = 0;
+                while(found == 0)
                 {
-                    items.Add(item);
+                    Console.WriteLine(filter);
+                    var tempItems = GetItemsAsync(filter.ToString(), i).Result;
+                    foreach (var item in tempItems)
+                    {
+                        items.Add(item);
+                        Console.WriteLine(item.Name);
+                        found++;
+                    }
+                    filter++;
                 }
             }
 

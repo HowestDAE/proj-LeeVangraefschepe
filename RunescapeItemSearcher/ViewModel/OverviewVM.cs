@@ -13,7 +13,7 @@ namespace RunescapeItemSearcher.ViewModel
 {
     public class OverviewVM : ObservableObject
     {
-        IItemRepository _itemRepository = new ItemOfflineRepository();
+        IItemRepository _itemRepository = new ItemAPIRepository();
         private List<Item> items = new List<Item>();
         private bool isLoading = false;
         private List<Category> _categories = new List<Category>();
@@ -24,6 +24,7 @@ namespace RunescapeItemSearcher.ViewModel
             Categories = _itemRepository.GetCategories();
             SelectedCategory = Categories[0];
             ShowDetailPage = new RelayCommand(LoadDetailPage, IsSelected);
+            ToggleRepo = new RelayCommand(ToggleRepositoy);
         }
         async void GetItems(string name)
         {
@@ -31,6 +32,8 @@ namespace RunescapeItemSearcher.ViewModel
             Items = await _itemRepository.GetItems(name, SelectedCategory);
             IsLoading = false;
         }
+        public string LastUpdate { get { return _itemRepository.LastUpdate; } }
+
         public List<Category> Categories
         {
             get { return _categories; }
@@ -71,9 +74,22 @@ namespace RunescapeItemSearcher.ViewModel
             }
         }
         public RelayCommand ShowDetailPage { get; private set; }
+        public RelayCommand ToggleRepo { get; private set; }
         public void LoadDetailPage()
         {
             MainVM.GotoDetails(SelectedItem);
+        }
+        private void ToggleRepositoy()
+        {
+            if (_itemRepository as ItemAPIRepository != null)
+            {
+                _itemRepository = new ItemOfflineRepository();
+            }
+            else
+            {
+                _itemRepository = new ItemAPIRepository();
+            }
+            OnPropertyChanged(nameof(LastUpdate));
         }
         public bool IsSelected()
         {

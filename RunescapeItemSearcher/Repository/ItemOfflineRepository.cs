@@ -15,8 +15,8 @@ namespace RunescapeItemSearcher.Repository
         private Dictionary<int, List<Item>> _data = null;
         private DateTime _lastUpdate = DateTime.MinValue;
 
-        public DateTime LastUpdate => GetLastUpdate();
-        private DateTime GetLastUpdate()
+        public string LastUpdate => GetLastUpdate();
+        private string GetLastUpdate()
         {
             if (_lastUpdate == DateTime.MinValue)
             {
@@ -32,7 +32,7 @@ namespace RunescapeItemSearcher.Repository
                     }
                 }
             }
-            return _lastUpdate;
+            return _lastUpdate.ToString("dd/MM/yyyy");
         }
 
         public List<Category> GetCategories()

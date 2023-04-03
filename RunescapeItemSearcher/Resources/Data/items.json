@@ -1,5 +1,5 @@
 {
-  "LastUpdate": "2023-04-03T15:19:02.9198403+02:00",
+  "LastUpdate": "2023-04-02T15:45:20.7040955+02:00",
   "Items": [
     {
       "id": 39935,
@@ -554,6 +554,42 @@
       "member": false
     },
     {
+      "id": 753,
+      "type": "Farming produce",
+      "name": "Cadava berries",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=753",
+      "description": "Poisonous berries.",
+      "current": {
+        "trend": "neutral",
+        "price": "2,441"
+      },
+      "member": false
+    },
+    {
+      "id": 5974,
+      "type": "Farming produce",
+      "name": "Coconut",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=5974",
+      "description": "It's a coconut.",
+      "current": {
+        "trend": "neutral",
+        "price": "8,391"
+      },
+      "member": false
+    },
+    {
+      "id": 5978,
+      "type": "Farming produce",
+      "name": "Coconut shell",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=5978",
+      "description": "All the milk has been removed.",
+      "current": {
+        "trend": "neutral",
+        "price": "178"
+      },
+      "member": false
+    },
+    {
       "id": 43,
       "type": "Fletching materials",
       "name": "Adamant arrowheads",
@@ -862,6 +898,54 @@
       "current": {
         "trend": "neutral",
         "price": "14"
+      },
+      "member": false
+    },
+    {
+      "id": 11238,
+      "type": "Hunting Produce",
+      "name": "Baby impling jar",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=11238",
+      "description": "Baby impling in a jar. That's a bit cruel.",
+      "current": {
+        "trend": "neutral",
+        "price": "1,309"
+      },
+      "member": false
+    },
+    {
+      "id": 10148,
+      "type": "Hunting Produce",
+      "name": "Black salamander",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=10148",
+      "description": "Slightly slimy and somewhat menacing.",
+      "current": {
+        "trend": "neutral",
+        "price": "3,904"
+      },
+      "member": false
+    },
+    {
+      "id": 10014,
+      "type": "Hunting Produce",
+      "name": "Black warlock",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=10014",
+      "description": "There's a black warlock butterfly in here.",
+      "current": {
+        "trend": "neutral",
+        "price": "546"
+      },
+      "member": false
+    },
+    {
+      "id": 10089,
+      "type": "Hunting Produce",
+      "name": "Blue feather",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=10089",
+      "description": "A cool blue feather.",
+      "current": {
+        "trend": "neutral",
+        "price": "131"
       },
       "member": false
     },
@@ -1426,6 +1510,78 @@
       "current": {
         "trend": "neutral",
         "price": "39.7k"
+      },
+      "member": false
+    },
+    {
+      "id": 44678,
+      "type": "Melee armour - mid level",
+      "name": "Banite armour set",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=44678",
+      "description": "Grand Exchange set containing a bane full helm, platebody, legs and shield.",
+      "current": {
+        "trend": "neutral",
+        "price": "226.7k"
+      },
+      "member": false
+    },
+    {
+      "id": 44680,
+      "type": "Melee armour - mid level",
+      "name": "Banite armour set + 1",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=44680",
+      "description": "Grand Exchange set containing a bane full helm, platebody, legs and shield.",
+      "current": {
+        "trend": "neutral",
+        "price": "1.6m"
+      },
+      "member": false
+    },
+    {
+      "id": 44682,
+      "type": "Melee armour - mid level",
+      "name": "Banite armour set + 2",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=44682",
+      "description": "Grand Exchange set containing a bane full helm, platebody, legs and shield.",
+      "current": {
+        "trend": "neutral",
+        "price": "3.1m"
+      },
+      "member": false
+    },
+    {
+      "id": 44684,
+      "type": "Melee armour - mid level",
+      "name": "Banite armour set + 3",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=44684",
+      "description": "Grand Exchange set containing a bane full helm, platebody, legs and shield.",
+      "current": {
+        "trend": "neutral",
+        "price": "641.1k"
+      },
+      "member": false
+    },
+    {
+      "id": 44686,
+      "type": "Melee armour - mid level",
+      "name": "Banite armour set + 4",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=44686",
+      "description": "Grand Exchange set containing a bane full helm, platebody, legs and shield.",
+      "current": {
+        "trend": "neutral",
+        "price": "2.5m"
+      },
+      "member": false
+    },
+    {
+      "id": 3751,
+      "type": "Melee armour - mid level",
+      "name": "Berserker helm",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=3751",
+      "description": "This helmet is worn by berserkers.",
+      "current": {
+        "trend": "neutral",
+        "price": "44.2k"
       },
       "member": false
     },
@@ -2774,6 +2930,18 @@
       "member": false
     },
     {
+      "id": 33901,
+      "type": "Pocket items",
+      "name": "Casket-salvaging scrimshaw",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=33901",
+      "description": "Successful fishing catches have a chance of finding various caskets. Higher-level fishing provides better chances. Lasts 3 hours.",
+      "current": {
+        "trend": "neutral",
+        "price": "218.0k"
+      },
+      "member": false
+    },
+    {
       "id": 44807,
       "type": "Stone spirits",
       "name": "Adamantite stone spirit",
@@ -2782,6 +2950,150 @@
       "current": {
         "trend": "neutral",
         "price": "42"
+      },
+      "member": false
+    },
+    {
+      "id": 47244,
+      "type": "Salvage",
+      "name": "Huge bladed adamant salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47244",
+      "description": "Salvageable fragments of smithed slashing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "21.8k"
+      },
+      "member": false
+    },
+    {
+      "id": 47084,
+      "type": "Salvage",
+      "name": "Huge bladed bronze salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47084",
+      "description": "Salvageable fragments of smithed slashing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "467"
+      },
+      "member": false
+    },
+    {
+      "id": 47124,
+      "type": "Salvage",
+      "name": "Huge bladed iron salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47124",
+      "description": "Salvageable fragments of smithed slashing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "2,660"
+      },
+      "member": false
+    },
+    {
+      "id": 47204,
+      "type": "Salvage",
+      "name": "Huge bladed mithril salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47204",
+      "description": "Salvageable fragments of smithed slashing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "18.9k"
+      },
+      "member": false
+    },
+    {
+      "id": 52548,
+      "type": "Salvage",
+      "name": "Huge bladed orikalkum salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=52548",
+      "description": "Salvageable fragments of smithed slashing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "124.3k"
+      },
+      "member": false
+    },
+    {
+      "id": 47284,
+      "type": "Salvage",
+      "name": "Huge bladed rune salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47284",
+      "description": "Salvageable fragments of smithed slashing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "37.4k"
+      },
+      "member": false
+    },
+    {
+      "id": 47164,
+      "type": "Salvage",
+      "name": "Huge bladed steel salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47164",
+      "description": "Salvageable fragments of smithed slashing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "7,890"
+      },
+      "member": false
+    },
+    {
+      "id": 47264,
+      "type": "Salvage",
+      "name": "Huge blunt adamant salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47264",
+      "description": "Salvageable fragments of smithed crushing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "31.7k"
+      },
+      "member": false
+    },
+    {
+      "id": 47104,
+      "type": "Salvage",
+      "name": "Huge blunt bronze salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47104",
+      "description": "Salvageable fragments of smithed crushing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "251"
+      },
+      "member": false
+    },
+    {
+      "id": 47144,
+      "type": "Salvage",
+      "name": "Huge blunt iron salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47144",
+      "description": "Salvageable fragments of smithed crushing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "1,129"
+      },
+      "member": false
+    },
+    {
+      "id": 47224,
+      "type": "Salvage",
+      "name": "Huge blunt mithril salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47224",
+      "description": "Salvageable fragments of smithed crushing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "12.8k"
+      },
+      "member": false
+    },
+    {
+      "id": 47304,
+      "type": "Salvage",
+      "name": "Huge blunt rune salvage",
+      "icon": "https://secure.runescape.com/m=itemdb_rs/1680517883819_obj_sprite.gif?id=47304",
+      "description": "Salvageable fragments of smithed crushing weaponry.",
+      "current": {
+        "trend": "neutral",
+        "price": "37.4k"
       },
       "member": false
     },

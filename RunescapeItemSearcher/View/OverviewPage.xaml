@@ -25,23 +25,33 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1.2*"></RowDefinition>
+            <RowDefinition Height=".8*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
             <RowDefinition Height="8*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Orderd by" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Bottom" Margin="15,0"></TextBlock>
-        <ComboBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}" Margin="15,0" Grid.Row="1"></ComboBox>
+      <TextBlock Grid.Row="0" Text="Category" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Bottom" Margin="15,0"></TextBlock>
+        <ComboBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}" Margin="15,5" Grid.Row="1"></ComboBox>
 
-        <TextBlock Grid.Row="0" Grid.Column="1" Text="Open selected item" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Bottom" Margin="15,0"></TextBlock>
-        <Button Grid.Row="1" Grid.Column="1" Content="Open" Command="{Binding ShowDetailPage}" Margin="15,0"></Button>
+            <TextBlock Grid.Row="2" Text="Repository" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Bottom" Margin="15,0"></TextBlock>
+            <Button Grid.Row="3" Margin="15,0,15,5" Command="{Binding ToggleRepo}" Content="Switch"></Button>
+        
 
-        <TextBlock Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#1d282f" Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisable}}"></TextBlock>
-        <TextBlock Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Text="LOADING..." Foreground="#e1bb34" FontSize="48" Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisable}}"></TextBlock>
-        <ListBox   Grid.Row="3" Grid.ColumnSpan="3" Foreground="Transparent" Background="Transparent" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" HorizontalContentAlignment="Stretch" BorderThickness="0">
+      <TextBlock Grid.Row="0" Grid.Column="1" Text="Open selected item" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Bottom" Margin="15,0"></TextBlock>
+        <Button Grid.Row="1" Grid.Column="1" Content="Open" Command="{Binding ShowDetailPage}" Margin="15,5"></Button>
+
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="Repository date" Foreground="#e1bb34" FontSize="18" VerticalAlignment="Bottom" Margin="15,0"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding LastUpdate}" Foreground="#e1bb34" FontSize="14" VerticalAlignment="top" Margin="15,0"></TextBlock>
+
+
+        <TextBlock Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#1d282f" Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisable}}"></TextBlock>
+        <TextBlock Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Text="LOADING..." Foreground="#e1bb34" FontSize="48" Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisable}}"></TextBlock>
+        <ListBox   Grid.Row="5" Grid.ColumnSpan="3" Foreground="Transparent" Background="Transparent" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" HorizontalContentAlignment="Stretch" BorderThickness="0">
             <ListBox.ItemTemplate>
           <DataTemplate>
-             <Grid Grid.ColumnSpan="3" Grid.Row="3">
+             <Grid Grid.ColumnSpan="3" Grid.Row="5">
                <Grid.ColumnDefinitions>
                    <ColumnDefinition Width="4*"></ColumnDefinition>
                    <ColumnDefinition></ColumnDefinition>
