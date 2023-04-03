@@ -36,7 +36,6 @@ namespace RunescapeItemSearcher.Repository
                 json = await response.Content.ReadAsStringAsync();
             }
 
-            Console.WriteLine(json);
             var cardTokens = JToken.Parse(json).SelectToken("items");
             foreach (var token in cardTokens)
             {
