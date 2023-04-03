@@ -90,6 +90,7 @@
     <Compile Include="Model\Item.cs" />
     <Compile Include="Repository\ItemAPIRepository.cs" />
     <Compile Include="Repository\IItemRepository.cs" />
+    <Compile Include="Repository\ItemOfflineRepository.cs" />
     <Compile Include="ViewModel\DetailVM.cs" />
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />

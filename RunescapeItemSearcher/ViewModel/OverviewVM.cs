@@ -13,7 +13,7 @@ namespace RunescapeItemSearcher.ViewModel
 {
     public class OverviewVM : ObservableObject
     {
-        IItemRepository _itemRepository = new ItemAPIRepository();
+        IItemRepository _itemRepository = new ItemOfflineRepository();
         private List<Item> items = new List<Item>();
         private bool isLoading = false;
         private List<Category> _categories = new List<Category>();

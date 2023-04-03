@@ -15,8 +15,14 @@ namespace RunescapeItemSearcher.Model
         {
             return Name;
         }
-
-        public static List<Category> All { get; set; }
+        public static int NameToId(string name)
+        {
+            foreach (Category category in GetAll())
+            {
+                if (category.Name == name) return category.Id;
+            }
+            return -1;
+        }
         public static List<Category> GetAll()
         {
             List<Category> list = new List<Category>();
