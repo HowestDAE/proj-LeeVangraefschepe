@@ -31,7 +31,7 @@
       <TextBlock Grid.ColumnSpan="3" Text="{Binding Item.Name, FallbackValue=Title}" Foreground="#e1bb34" FontSize="36" HorizontalAlignment="Center"></TextBlock>
 
       <Image Grid.Row="1" Grid.RowSpan="2" Source="/Resources/Images/ImageBackground.png"/>
-      <Image Grid.Row="1" Grid.RowSpan="2" Source="{Binding Item.Icon}" Stretch="None"/>
+      <Image Grid.Row="1" Grid.RowSpan="2" Source="{Binding Item.Icon}" Stretch="Uniform" Margin="20" HorizontalAlignment="Center"/>
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="3">
             <StackPanel Orientation="Horizontal">
               <TextBlock Grid.Column="1" Grid.Row="1" Text="Price: " Foreground="AliceBlue" FontSize="21"></TextBlock>
